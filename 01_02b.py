@@ -1,6 +1,10 @@
+from collections import Counter
+from pprint import pprint
+
 def get_common_products(products_purchased):
     #code goes here
-    return
+    counter = Counter(products_purchased)
+    return counter.most_common(3)
 
 def main():
     products_purchased = ["DES005",
@@ -63,7 +67,7 @@ def main():
             "SAL001",
             "BEV003",
             "DES001"]
-    print(get_common_products(products_purchased)) 
+    pprint(get_common_products(products_purchased)) 
 
 if __name__ == "__main__":
     main()
